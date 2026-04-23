@@ -12,5 +12,8 @@
   "packageManager": "pnpm@10.29.3",
   "dependencies": {
     "openai": "^6.34.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^5.7.13"
   }
 }
