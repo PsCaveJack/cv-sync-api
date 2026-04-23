@@ -1,9 +1,12 @@
-import OpenAI from "openai";
-
 if (!process.env.OPENAI_API_KEY) {
   throw new Error("OPENAI_API_KEY is not set");
 }
 
 export const MODEL = "gpt-5.2";
 
-export const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+export function getHeaders() {
+  return {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+  };
+}
