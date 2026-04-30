@@ -7,7 +7,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const trimmed: string = req.body.trimmedText;
-  const previousResponseId: number = req.body.previousResponseId;
+  const previousResponseId: string = req.body.previousResponseId;
 
   if (!trimmed || !previousResponseId) {
     return res.status(400).json({ error: "Missing required fields: trimmedText and previousResponseId" });
